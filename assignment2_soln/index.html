@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <!-- Load icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      th {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="search-bar">
+      <input
+        type="text"
+        name="search"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search for names.."
+      />
+
+      <label for="status">Choose a status:</label>
+      <select id="Input" onchange="filterbystatus()">
+        <option class="trip-completed">Trip Completed</option>
+        <option class="cancelled">Cancelled</option>
+        <option class="nocars">No Cars Available</option>
+      </select>
+      <br /><br />
+    </form>
+
+    <table class="table table-striped" id="listingTable">
+      <tr class="bg-info">
+        <th>Request id</th>
+        <th>Pickup point</th>
+        <th>Driver id</th>
+        <th>Status</th>
+        <th>Request timestamp</th>
+        <th>Request timestamp</th>
+      </tr>
+      <tbody id="myTable"></tbody>
+    </table>
+    <!-- <a href="javascript:prevPage()" id="btn_prev">Prev</a>
+    <a href="javascript:nextPage()" id="btn_next">Next</a>
+    page: <span id="page"></span> -->
+    <script src="/index.js"></script>
+    <!-- <script src="/pagination.js"></script> -->
+  </body>
+</html>
